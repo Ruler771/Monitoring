@@ -7,6 +7,33 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <ComboBox Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Background="Transparent" BorderThickness="0" x:Name="CB_city" ItemsSource="{Binding}" DisplayMemberPath="city" Width="120" />
+        <DataGrid Grid.Column="0" Grid.Row="1" x:Name="DG_monParams" IsReadOnly="True" BorderThickness="0" AutoGenerateColumns="False" HorizontalGridLinesBrush="LightGray" VerticalGridLinesBrush="LightGray" >
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Header="Вкл" Binding="{Binding IsOn}"/>
+                <DataGridTextColumn Header="Число" Binding="{Binding ParamSort}"/>
+                <DataGridTextColumn Header="Страна" Binding="{Binding Sort}"/>
+                <DataGridTextColumn Header="Директор" Binding="{Binding Sort}"/>
+                <DataGridTextColumn Header="ДЦ" Binding="{Binding Sort}"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Результат}"/>
+            </DataGrid.Columns>
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Примечание: " Style="{StaticResource TB}" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Comment}" Style="{StaticResource TB}" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+        </DataGrid>
     </Grid>
 </Window>
