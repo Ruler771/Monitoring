@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Monitoring"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Мониторинг" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
+            <ComboBox HorizontalAlignment="Left" Margin="3" Background="Transparent" BorderThickness="0" x:Name="CB_city" ItemsSource="{Binding}" DisplayMemberPath="city" Width="120" />
+            <Button Content=" Начать мониторинг " Margin="3" Name="GoMon"></Button>
+            <Button Content=" Редактировать " Margin="3" Name="RedMon"></Button>
+            <Button Content=" Контрольная проверка " Margin="3" Name="ConProv"></Button>
+        </StackPanel>
+        <DataGrid Grid.Column="0" Grid.Row="1" x:Name="DG_monParams" IsReadOnly="True" BorderThickness="0" AutoGenerateColumns="False" HorizontalGridLinesBrush="LightGray" VerticalGridLinesBrush="LightGray" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header=" Страна " Binding="{Binding CountryName}"/>
+                <DataGridTextColumn Header=" ДЦ " Binding="{Binding FilialName}"/>
+                <DataGridTextColumn Header=" На этой недели " Binding="{Binding Name}"/>
+                <DataGridTextColumn Header=" В этом месяце " Binding="{Binding Name}"/>
+                <DataGridTextColumn Header=" Тема сегодняшней призентации " Binding="{Binding Результат}"/>
+                <DataGridTextColumn Header=" Проверяющий " Binding="{Binding Результат}"/>
+                <DataGridTextColumn Header=" Статус мониторинга " Binding="{Binding Результат}"/>
+            </DataGrid.Columns>
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Примечание: " Style="{StaticResource TB}" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Comment}" Style="{StaticResource TB}" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+        </DataGrid>
     </Grid>
 </Window>
