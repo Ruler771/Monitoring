@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="49f920b6-2c0b-4b28-bee3-c24f8fc1dfc6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://nms.it24cloud.com:1313/NMSService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="NMSService.xsd" MetadataType="Schema" ID="3c434901-0074-4137-8066-1abe44416124" SourceId="1" SourceUrl="http://nms.it24cloud.com:1313/NMSService.svc?xsd=xsd2" />
+    <MetadataFile FileName="NMSService.disco" MetadataType="Disco" ID="ca59c2bc-f5c2-4e0a-81b7-2561c53f70c7" SourceId="1" SourceUrl="http://nms.it24cloud.com:1313/NMSService.svc?disco" />
+    <MetadataFile FileName="NMSService1.xsd" MetadataType="Schema" ID="a61c43ee-0bc0-47c1-a987-eaf7ee06f5a0" SourceId="1" SourceUrl="http://nms.it24cloud.com:1313/NMSService.svc?xsd=xsd0" />
+    <MetadataFile FileName="NMSService2.xsd" MetadataType="Schema" ID="152b255c-beaa-4821-996c-3d25941bbd9e" SourceId="1" SourceUrl="http://nms.it24cloud.com:1313/NMSService.svc?xsd=xsd1" />
+    <MetadataFile FileName="NMSService.wsdl" MetadataType="Wsdl" ID="c58bb952-6fec-4f07-a1ec-ac6f4859ae09" SourceId="1" SourceUrl="http://nms.it24cloud.com:1313/NMSService.svc?wsdl" />
+    <MetadataFile FileName="NMSService3.xsd" MetadataType="Schema" ID="64329767-790c-4c36-8b58-90191b2f8534" SourceId="1" SourceUrl="http://nms.it24cloud.com:1313/NMSService.svc?xsd=xsd3" />
+    <MetadataFile FileName="NMSService4.xsd" MetadataType="Schema" ID="0fef8407-a4f8-4065-8c1d-0176a2004603" SourceId="1" SourceUrl="http://nms.it24cloud.com:1313/NMSService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

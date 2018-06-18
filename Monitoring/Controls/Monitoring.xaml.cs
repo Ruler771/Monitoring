@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Monitoring
+namespace Monitoring.Controls
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Monitoring.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Monitoring : UserControl
     {
-        public MainWindow()
+        public Monitoring()
         {
             InitializeComponent();
-        }
-
-        public testc()
-        {
-            testc;
         }
     }
 }
